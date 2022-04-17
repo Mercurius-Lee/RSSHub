@@ -801,6 +801,19 @@
         docs:"https://docs.rsshub.app/new-media.html#cha-ping",
         source:[ "/newsflash" ],
         target:"/chaping/newsflash" } ] },
+  "chinacef.cn":{ _name:"首席经济学家论坛",
+    ".":[ { title:"最新文章列表",
+        docs:"https://docs.rsshub.app/finance.html#shou-xi-jing-ji-xue-jia-lun-tan",
+        source:[ "/" ],
+        target:"/chinacef" },
+      { title:"专家文章",
+        docs:"https://docs.rsshub.app/finance.html#shou-xi-jing-ji-xue-jia-lun-tan-zhuan-jia",
+        source:[ "/index.php/experts/zjmain/experts_id/:experts_id" ],
+        target:"/chinacef/:experts_id" },
+      { title:"金融热点",
+        docs:"https://docs.rsshub.app/finance.html#shou-xi-jing-ji-xue-jia-lun-tan-jin-rong-re-dian",
+        source:[ "/index.php/index/index" ],
+        target:"/chinacef/portal/hot" } ] },
   "ciidbnu.org":{ _name:"中国收入分配研究院",
     ".":[ { title:"分类",
         docs:"https://docs.rsshub.app/new-media.html#",
@@ -915,6 +928,23 @@
                         }
                     });
                     return `/dahecube/${type}`;
+                } } ] },
+  "dapenti.com":{ _name:"喷嚏",
+    ".":[ { title:"图卦",
+        docs:"https://docs.rsshub.app/picture.html#pen-ti",
+        source:[ "/blog/blog.asp" ],
+        target:(params, url) => {
+                    if (new URL(url).searchParams.get('subjectid') === '70') {
+                        return '/dapenti/tugua';
+                    }
+                } },
+      { title:"主题",
+        docs:"https://docs.rsshub.app/picture.html#pen-ti",
+        source:[ "/blog/blog.asp" ],
+        target:(params, url) => {
+                    if (new URL(url).searchParams.get('subjectid')) {
+                        return '/dapenti/subject/' + new URL(url).searchParams.get('subjectid');
+                    }
                 } } ] },
   "dayanzai.me":{ _name:"大眼仔旭",
     ".":[ { title:"大眼仔旭",
@@ -1755,6 +1785,16 @@
   "guggenheim.org":{ _name:"Solomon R. Guggenheim Museum",
     www:[ { title:"Exhibitions",
         docs:"https://docs.rsshub.app/en/travel.html#solomon-r-guggenheim-museum" } ] },
+  "guokr.com":{ _name:"果壳网",
+    ".":[ { title:"科学人",
+        docs:"https://docs.rsshub.app/new-media.html#guo-ke-wang-ke-xue-ren",
+        source:[ "/scientific",
+          "/" ],
+        target:"/guokr/scientific" },
+      { title:"专栏",
+        docs:"https://docs.rsshub.app/new-media.html#guo-ke-wang-zhuan-lan",
+        source:[ "/" ],
+        target:"/guokr/:channel" } ] },
   "gzh360.com":{ _name:"公众号360",
     web:[ { title:"公众号",
         docs:"https://docs.rsshub.app/new-media.html#gong-zhong-hao-360",
@@ -3711,6 +3751,12 @@
         source:[ "/trending",
           "/" ],
         target:(params, url) => `/pubmed/trending/${new URL(url).searchParams.getAll('filter').join(',')}` } ] },
+  "qbittorrent.org":{ _name:"qBittorrent",
+    ".":[ { title:"News",
+        docs:"https://docs.rsshub.app/program-update.html#qbittorrent",
+        source:[ "/news.php",
+          "/" ],
+        target:"/qbittorrent/news" } ] },
   "qidiantu.com":{ _name:"起点图",
     ".":[ { title:"首订",
         docs:"https://docs.rsshub.app/reading.html#qi-dian-tu-shou-ding",
@@ -3838,6 +3884,187 @@
         docs:"https://docs.rsshub.app/university.html#zhong-guo-ren-min-da-xue-ren-shi-chu",
         source:[ "/" ],
         target:"/ruc/hr/:category?" } ] },
+  "sciencenet.cn":{ _name:"科学网",
+    blog:[ { title:"精选博客",
+        docs:"https://docs.rsshub.app/new-media.html#ke-xue-wang-jing-xuan-bo-ke",
+        source:[ "/blog.php",
+          "/" ],
+        target:(params, url) => `/sciencenet/blog/${new URL(url).searchParams.get('mod')}/${new URL(url).searchParams.get('op')}/${new URL(url).searchParams.get('ord')}` },
+      { title:"用户博客",
+        docs:"https://docs.rsshub.app/new-media.html#ke-xue-wang-jing-xuan-bo-ke",
+        source:[ "/u/:id",
+          "/" ],
+        target:"/sciencenet/user/:id" } ] },
+  "sdu.edu.cn":{ _name:"山东大学",
+    "xinwen.wh":[ { title:"(威海)新闻网|校园要闻",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue-wei-hai",
+        source:[ "/" ],
+        target:"/sdu/wh/news/xyyw" },
+      { title:"(威海)新闻网|学生动态",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue-wei-hai",
+        source:[ "/" ],
+        target:"/sdu/wh/news/xsdt" },
+      { title:"(威海)新闻网|综合新闻",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue-wei-hai",
+        source:[ "/" ],
+        target:"/sdu/wh/news/zhxw" },
+      { title:"(威海)新闻网|山大视点",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue-wei-hai",
+        source:[ "/" ],
+        target:"/sdu/wh/news/sdsd" },
+      { title:"(威海)新闻网|菁菁校园",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue-wei-hai",
+        source:[ "/" ],
+        target:"/sdu/wh/news/jjxy" },
+      { title:"(威海)新闻网|校园简讯",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue-wei-hai",
+        source:[ "/" ],
+        target:"/sdu/wh/news/xyjx" },
+      { title:"(威海)新闻网|玛珈之窗",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue-wei-hai",
+        source:[ "/" ],
+        target:"/sdu/wh/news/mjzc" },
+      { title:"(威海)新闻网|热点专题",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue-wei-hai",
+        source:[ "/" ],
+        target:"/sdu/wh/news/rdzt" },
+      { title:"(威海)新闻网|媒体视角",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue-wei-hai",
+        source:[ "/" ],
+        target:"/sdu/wh/news/mtsj" },
+      { title:"(威海)新闻网|高教视野",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue-wei-hai",
+        source:[ "/" ],
+        target:"/sdu/wh/news/gjsy" },
+      { title:"(威海)新闻网|理论学习",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue-wei-hai",
+        source:[ "/" ],
+        target:"/sdu/wh/news/llxx" } ],
+    "www.cmse":[ { title:"材料科学与工程学院通知",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue",
+        source:[ "/*path",
+          "/" ],
+        target:(params) => {
+                    let type;
+                    switch (params.path) {
+                        case 'zxzx/tzgg.htm':
+                            type = '0';
+                            break;
+                        case 'zxzx/xyxw.htm':
+                            type = '1';
+                            break;
+                        case 'zxzx/bksjy.htm':
+                            type = '2';
+                            break;
+                        case 'zxzx/yjsjy.htm':
+                            type = '3';
+                            break;
+                        case 'zxzx/xsdt.htm':
+                            type = '4';
+                            break;
+                        default:
+                            type = '0';
+                            break;
+                    }
+                    return `/sdu/cmse/${type}`;
+                } } ],
+    "www.cs":[ { title:"计算机科学与技术学院通知",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue",
+        source:[ "/*path",
+          "/" ],
+        target:(params) => {
+                    let type;
+                    switch (params.path) {
+                        case 'xygg.htm':
+                            type = '0';
+                            break;
+                        case 'xsbg.htm':
+                            type = '1';
+                            break;
+                        case 'kjjx.htm':
+                            type = '2';
+                            break;
+                        default:
+                            type = '0';
+                            break;
+                    }
+                    return `/sdu/cs/${type}`;
+                } } ],
+    "www.epe":[ { title:"能源与动力工程学院通知",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue",
+        source:[ "/*path",
+          "/" ],
+        target:(params) => {
+                    let type;
+                    switch (params.path) {
+                        case 'zxzx/xydt.htm':
+                            type = '0';
+                            break;
+                        case 'zxzx/tzgg.htm':
+                            type = '1';
+                            break;
+                        case 'zxzx/xslt.htm':
+                            type = '2';
+                            break;
+                        default:
+                            type = '0';
+                            break;
+                    }
+                    return `/sdu/epe/${type}`;
+                } } ],
+    "www.mech":[ { title:"机械工程学院通知",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue",
+        source:[ "/*path",
+          "/" ],
+        target:(params) => {
+                    let type;
+                    switch (params.path) {
+                        case 'xwdt/tzgg.htm':
+                            type = '0';
+                            break;
+                        case 'xwdt/ysxw.htm':
+                            type = '1';
+                            break;
+                        case 'xwdt/jxxx.htm':
+                            type = '2';
+                            break;
+                        case 'xwdt/xsdt.htm':
+                            type = '3';
+                            break;
+                        case 'xwdt/xyjb.htm':
+                            type = '4';
+                            break;
+                        default:
+                            type = '0';
+                            break;
+                    }
+                    return `/sdu/mech/${type}`;
+                } } ],
+    "www.sc":[ { title:"软件学院通知",
+        docs:"https://docs.rsshub.app/university.html#shan-dong-da-xue",
+        source:[ "/*path",
+          "/" ],
+        target:(params) => {
+                    let type;
+                    switch (params.path) {
+                        case 'tzgg.htm':
+                            type = '0';
+                            break;
+                        case 'kxyj/xsyg.htm':
+                            type = '1';
+                            break;
+                        case 'rcpy/bkjy.htm':
+                            type = '2';
+                            break;
+                        case 'rcpy/yjsjy.htm':
+                            type = '3';
+                            break;
+                        default:
+                            type = '0';
+                            break;
+                    }
+                    return `/sdu/sc/${type}`;
+                } } ] },
   "segmentfault.com":{ _name:"SegmentFault",
     ".":[ { title:"频道",
         docs:"https://docs.rsshub.app/programming.html#segmentfault",
@@ -4146,6 +4373,21 @@
                         return '/taobao/zhongchou/other';
                     }
                 } } ] },
+  "taptap.com":{ _name:"TapTap",
+    ".":[ { title:"游戏论坛",
+        docs:"https://docs.rsshub.app/game.html#taptap",
+        source:[ "/app/:id/topic",
+          "/app/:id" ],
+        target:"/taptap/topic/:id" },
+      { title:"游戏更新",
+        docs:"https://docs.rsshub.app/game.html#taptap",
+        source:[ "/app/:id" ],
+        target:"/taptap/changelog/:id" },
+      { title:"游戏评价",
+        docs:"https://docs.rsshub.app/game.html#taptap",
+        source:[ "/app/:id/review",
+          "/app/:id" ],
+        target:"/taptap/review/:id" } ] },
   "t.me":{ _name:"Telegram",
     ".":[ { title:"频道",
         docs:"https://docs.rsshub.app/social-media.html#telegram",
@@ -4707,6 +4949,35 @@
         docs:"https://docs.rsshub.app/game.html#you-xi-da-zhe-qing-bao-you-xi-zhe-kou",
         source:"/",
         target:"/yxdzqb/:type" } ] },
+  "yystv.cn":{ _name:"游研社",
+    ".":[ { title:"推游",
+        docs:"https://docs.rsshub.app/game.html#you-yan-she",
+        source:"/b/recommend",
+        target:"/yystv/category/recommend" },
+      { title:"游戏史",
+        docs:"https://docs.rsshub.app/game.html#you-yan-she",
+        source:"/b/history",
+        target:"/yystv/category/history" },
+      { title:"大事件",
+        docs:"https://docs.rsshub.app/game.html#you-yan-she",
+        source:"/b/big",
+        target:"/yystv/category/big" },
+      { title:"文化",
+        docs:"https://docs.rsshub.app/game.html#you-yan-she",
+        source:"/b/culture",
+        target:"/yystv/category/culture" },
+      { title:"趣闻",
+        docs:"https://docs.rsshub.app/game.html#you-yan-she",
+        source:"/b/news",
+        target:"/yystv/category/news" },
+      { title:"经典回顾",
+        docs:"https://docs.rsshub.app/game.html#you-yan-she",
+        source:"/b/retro",
+        target:"/yystv/category/retro" },
+      { title:"全部文章",
+        docs:"https://docs.rsshub.app/game.html#you-yan-she",
+        source:"/docs",
+        target:"/yystv/docs" } ] },
   "myzaker.com":{ _name:"ZAKER",
     ".":[ { title:"分类",
         docs:"https://docs.rsshub.app/new-media.html#zaker",

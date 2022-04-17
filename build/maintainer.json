@@ -280,6 +280,15 @@
     "/chaping/newsflash": [
         "Fatpandac"
     ],
+    "/chinacef/": [
+        "FledgeXu"
+    ],
+    "/chinacef/:experts_id": [
+        "kdanfly"
+    ],
+    "/chinacef/portal/hot": [
+        "kdanfly"
+    ],
     "/ciidbnu/:id?": [
         "nczitzk"
     ],
@@ -322,6 +331,12 @@
     ],
     "/dahecube/:type?": [
         "linbuxiao"
+    ],
+    "/dapenti/tugua": [
+        "tgly307"
+    ],
+    "/dapenti/subject/:id": [
+        "xyqfer"
     ],
     "/dayanzai/dayanzai/:category/:fulltext?": [
         "nitezs"
@@ -784,6 +799,14 @@
     ],
     "/guggenheim/exhibitions": [
         "chazeon"
+    ],
+    "/guokr/scientific": [
+        "alphardex",
+        "nczitzk"
+    ],
+    "/guokr/:channel": [
+        "DHPO",
+        "hoilc"
     ],
     "/gzh360/category/:id?": [
         "Rongronggg9"
@@ -1478,6 +1501,9 @@
     "/pubmed/trending/:filters?": [
         "nczitzk"
     ],
+    "/qbittorrent/news": [
+        "TonyRL"
+    ],
     "/qidiantu/:category?/:type?/:is_history?": [
         "nczitzk"
     ],
@@ -1556,6 +1582,30 @@
     ],
     "/sciencedirect/journal/:id": [
         "nczitzk"
+    ],
+    "/sciencenet/blog/:type?/:time?/:sort?": [
+        "nczitzk"
+    ],
+    "/sciencenet/user/:id": [
+        "nczitzk"
+    ],
+    "/sdu/cmse/:type?": [
+        "Ji4n1ng"
+    ],
+    "/sdu/cs/:type?": [
+        "Ji4n1ng"
+    ],
+    "/sdu/epe/:type?": [
+        "Ji4n1ng"
+    ],
+    "/sdu/mech/:type?": [
+        "Ji4n1ng"
+    ],
+    "/sdu/sc/:type?": [
+        "Ji4n1ng"
+    ],
+    "/sdu/wh/news/:column?": [
+        "kxxt"
     ],
     "/secnews/index": [
         "kaiili"
@@ -1671,6 +1721,17 @@
     "/taobao/zhongchou/:type?": [
         "xyqfer",
         "Fatpandac"
+    ],
+    "/taptap/changelog/:id": [
+        "hoilc"
+    ],
+    "/taptap/review/:id/:order?/:lang?": [
+        "hoilc",
+        "TonyRL"
+    ],
+    "/taptap/topic/:id/:type?/:sort?/:lang?": [
+        "hoilc",
+        "TonyRL"
     ],
     "/telegram/telegram/channel/:username/:routeParams?": [
         "DIYgod",
@@ -1963,6 +2024,12 @@
         "LogicJake",
         "nczitzk"
     ],
+    "/yystv/category/:category": [
+        "LightStrawberry"
+    ],
+    "/yystv/docs": [
+        "HaitianLiu"
+    ],
     "/zaker/:type/:id?": [
         "LogicJake",
         "kt286",
@@ -2070,8 +2137,6 @@
     "/pixiv/search/:keyword/:order?/:mode?": [],
     "/fanbox/:user?": [],
     "/plainlaw/archives": [],
-    "/dapenti/tugua": [],
-    "/dapenti/subject/:id": [],
     "/dockone/weekly": [],
     "/zcfy": [],
     "/zcfy/index": [],
@@ -2368,11 +2433,6 @@
     "/hust/aia/notice/:type?": [],
     "/jgsu/jwc": [],
     "/csu/job/:type?": [],
-    "/sdu/sc/:type?": [],
-    "/sdu/cs/:type?": [],
-    "/sdu/cmse/:type?": [],
-    "/sdu/mech/:type?": [],
-    "/sdu/epe/:type?": [],
     "/ouc/it/:type?": [],
     "/dlu/jiaowu/news": [],
     "/dgut/jwc/:type?": [],
@@ -2410,8 +2470,6 @@
     "/fzu_min/:type": [],
     "/xmu/aero/:type": [],
     "/ifanr/:channel?": [],
-    "/guokr/scientific": [],
-    "/guokr/:channel": [],
     "/ipsw/index/:ptype/:pname": [],
     "/curseforge/files/:project": [],
     "/sspai/series": [],
@@ -2652,8 +2710,6 @@
     "/bjx/huanbao": [],
     "/gamersky/news": [],
     "/gamersky/ent/:category": [],
-    "/yystv/category/:category": [],
-    "/yystv/docs": [],
     "/konami/pesmobile/:lang?/:os?": [],
     "/psnine/index": [],
     "/psnine/shuzhe": [],
@@ -2927,9 +2983,6 @@
     "/reuters/channel/:site/:channel": [],
     "/pgyer/:app?": [],
     "/weibo/timeline/:uid/:feature?/:routeParams?": [],
-    "/taptap/topic/:id/:label?": [],
-    "/taptap/changelog/:id": [],
-    "/taptap/review/:id/:order?": [],
     "/watchface/:watch_type?/:list_type?": [],
     "/cnu/selected": [],
     "/cnu/discovery/:type?/:category?": [],
@@ -3527,7 +3580,6 @@
     "/bell-labs/events-news/:category?": [],
     "/yicas/blog": [],
     "/93/:category?": [],
-    "/sciencenet/blog/:type?/:time?/:sort?": [],
     "/dailyart/:language?": [],
     "/scboy/thread/:tid": [],
     "/yuanliao/:tag?/:sort?": [],
